@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Zéro Déchet - Réduisons le Plastique</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .solution-hero {
+      background: linear-gradient(to bottom, var(--green-50), white);
+      padding: 4rem 1rem;
+    }
+    
+    .solution-icon {
+      font-size: 3rem;
+      color: var(--green-500);
+      margin-bottom: 1.5rem;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    @media (min-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .stat-card {
+      background-color: var(--green-50);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid var(--green-100);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--green-600);
+      margin-bottom: 0.5rem;
+    }
+    
+    .alternatives-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+    
+    .alternative-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1.5rem;
+    }
+    
+    .alternative-icon {
+      background-color: var(--green-50);
+      color: var(--green-500);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .alternative-content h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-bar {
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--green-600);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+    
+    .nav-links a:hover {
+      color: var(--green-600);
+    }
+    
+    .active {
+      color: var(--green-600) !important;
+      font-weight: 600;
+    }
+    
+    .steps-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .step-item {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .step-item::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--green-100);
+      color: var(--green-700);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Réduisons le Plastique</a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="hydratation-responsable.html">Hydratation</a>
+        <a href="courses-zero-dechet.html" class="active">Courses</a>
+        <a href="cuisine-ecologique.html">Cuisine</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="solution-hero">
+    <div class="container">
+      <div class="section-header">
+        <div class="solution-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h1>Courses Zéro Déchet</h1>
+        <p>Apprenez à faire vos courses sans générer de déchets plastiques et à adopter une consommation plus responsable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <h2>Qu'est-ce que les courses zéro déchet ?</h2>
+          <p>
+            Les courses zéro déchet consistent à acheter des produits sans emballages jetables ou avec des emballages 
+            réutilisables, compostables ou recyclables. Cette approche vise à éliminer les déchets à la source plutôt 
+            que de simplement les gérer après utilisation. Elle s'inscrit dans une démarche plus large de consommation 
+            responsable et de réduction de notre empreinte écologique.
+          </p>
+          
+          <p>
+            Faire ses courses en mode zéro déchet demande un peu d'organisation et de préparation, mais devient rapidement 
+            une habitude gratifiante qui permet de réduire considérablement sa production de déchets, notamment plastiques.
+          </p>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">40%</div>
+              <p>Des emballages plastiques sont utilisés une seule fois puis jetés</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">30 kg</div>
+              <p>D'emballages plastiques jetés par personne chaque année en France</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">500+</div>
+              <p>Épiceries vrac et zéro déchet en France</p>
+            </div>
+          </div>
+          
+          <h2>Les essentiels pour des courses zéro déchet</h2>
+          <ul class="alternatives-list">
+            <li class="alternative-item">
+              <div class="alternative-icon">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="alternative-content">
+                <h3>Sacs réutilisables</h3>
+                <p>
+                  Les sacs en tissu sont la première étape pour réduire les déchets plastiques lors des courses. 
+                  Optez pour des sacs en coton, en lin ou en jute qui sont résistants et lavables. Gardez-en toujours 
+                  quelques-uns dans votre voiture, votre sac à main ou près de votre porte d'entrée pour ne jamais être pris au dépourvu.
+                </p>
+                <p>
+                  <strong>Types de sacs :</strong> Sacs cabas pour les courses générales, sacs à vrac pour les aliments en vrac, 
+                  sacs à pain, filets pour les fruits et légumes.
+                </p>
+              </div>
+            </li>
+            
+            <li class="alternative-item">
+              <div class="alternative-icon">
+                <i class="fas fa-glass-whiskey"></i>
+              </div>
+              <div class="alternative-content">
+                <h3>Contenants réutilisables</h3>
+                <p>
+                  Pour les produits humides ou les aliments préparés, des contenants hermétiques sont indispensables. 
+                  Les bocaux en verre, les boîtes en inox ou les contenants en verre avec couvercle sont parfaits pour 
+                  transporter fromages, viandes, poissons ou plats préparés.
+                </p>
+                <p>
+                  <strong>Astuce :</strong> Demandez toujours au commerçant si vous pouvez utiliser vos propres contenants. 
+                  De plus en plus de commerces acceptent cette pratique, voire l'encouragent.
+                </p>
+              </div>
+            </li>
+            
+            <li class="alternative-item">
+              <div class="alternative-icon">
+                <i class="fas fa-store"></i>
+              </div>
+              <div class="alternative-content">
+                <h3>Épiceries vrac et marchés</h3>
+                <p>
+                  Les épiceries vrac sont spécialement conçues pour permettre aux clients d'acheter uniquement la quantité 
+                  dont ils ont besoin, sans emballage superflu. On y trouve généralement des céréales, des légumineuses, 
+                  des fruits secs, des épices, mais aussi des produits d'entretien et d'hygiène.
+                </p>
+                <p>
+                  Les marchés locaux sont également d'excellents endroits pour acheter des produits frais directement 
+                  auprès des producteurs, souvent avec peu ou pas d'emballage.
+                </p>
+              </div>
+            </li>
+            
+            <li class="alternative-item">
+              <div class="alternative-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <div class="alternative-content">
+                <h3>Emballages consignés</h3>
+                <p>
+                  Le système de consigne, autrefois courant, fait son grand retour. De plus en plus de producteurs proposent 
+                  leurs produits dans des contenants consignés (bouteilles en verre, pots, etc.) que vous pouvez rapporter 
+                  après utilisation pour être nettoyés et réutilisés.
+                </p>
+                <p>
+                  <strong>Avantages :</strong> Réduction significative des déchets, économie de ressources, soutien à l'économie circulaire.
+                </p>
+              </div>
+            </li>
+          </ul>
+          
+          <h2>Comment démarrer ses courses zéro déchet</h2>
+          <ul class="steps-list">
+            <li class="step-item">
+              <h3>Préparez votre kit de courses</h3>
+              <p>
+                Rassemblez vos sacs en tissu, contenants en verre ou en inox, bocaux et bouteilles réutilisables. 
+                Gardez ce kit dans un endroit facilement accessible ou dans votre voiture.
+              </p>
+            </li>
+            <li class="step-item">
+              <h3>Planifiez vos repas et faites une liste</h3>
+              <p>
+                La planification est essentielle pour éviter les achats impulsifs et le gaspillage alimentaire. 
+                Faites l'inventaire de ce que vous avez déjà et établissez une liste précise de ce dont vous avez besoin.
+              </p>
+            </li>
+            <li class="step-item">
+              <h3>Localisez les commerces adaptés</h3>
+              <p>
+                Recherchez les épiceries vrac, marchés locaux, AMAP et commerces de proximité qui acceptent les contenants 
+                réutilisables dans votre région.
+              </p>
+            </li>
+            <li class="step-item">
+              <h3>Commencez progressivement</h3>
+              <p>
+                Ne vous mettez pas la pression pour tout changer d'un coup. Commencez par remplacer un type d'emballage 
+                à la fois, par exemple les sacs plastiques ou les emballages de fruits et légumes.
+              </p>
+            </li>
+            <li class="step-item">
+              <h3>Adaptez selon vos besoins</h3>
+              <p>
+                Le zéro déchet n'est pas un concours de perfection. Adaptez cette démarche à votre mode de vie, 
+                votre budget et vos contraintes personnelles.
+              </p>
+            </li>
+          </ul>
+          
+          <div class="alert success">
+            <h4>Le saviez-vous ?</h4>
+            <p>
+              Acheter en vrac permet généralement d'économiser de l'argent car vous ne payez pas pour l'emballage et 
+              vous achetez exactement la quantité dont vous avez besoin, ce qui réduit également le gaspillage alimentaire.
+            </p>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <a href="index.html" class="button outline">
+            <i class="fas fa-arrow-left"></i>
+            Retour à l'accueil
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>À Propos</h4>
+          <p>
+            Cette web app a été créée dans le cadre du hackathon IA for Good pour sensibiliser à la réduction de
+            l'usage du plastique.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">Guide du zéro déchet</a></li>
+            <li><a href="#">Alternatives au plastique</a></li>
+            <li><a href="#">Initiatives locales</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Partagez</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
+            <a href="#"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+            <a href="#"><i class="fab fa-facebook"></i><span class="sr-only">Facebook</span></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Réduisons le Plastique. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

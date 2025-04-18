@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réduisons le Plastique - Pour un avenir durable</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<nav class="nav-bar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Réduisons le Plastique</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="hydratation-responsable.html">Hydratation</a>
+        <a href="courses-zero-dechet.html">Courses</a>
+        <a href="cuisine-ecologique.html">Cuisine</a>
+      </div>
+    </div>
+  </nav>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Chaque Geste Compte Pour <span class="highlight">Notre Planète</span></h1>
+        <p>Découvrez comment réduire votre empreinte plastique et contribuer à un avenir plus durable.</p>
+        <div class="button-group">
+          <a href="#calculator" class="button primary">
+            Calculer mon impact
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#pledge" class="button outline">Prendre un engagement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Facts Section -->
+  <section class="facts" id="facts">
+    <div class="container">
+      <div class="section-header">
+        <h2>L'Impact du Plastique</h2>
+        <p>Le plastique à usage unique représente une menace majeure pour notre environnement. Découvrez les faits qui vous feront réfléchir.</p>
+      </div>
+      
+      <div class="carousel-container">
+        <div class="carousel" id="facts-carousel">
+          <div class="carousel-item amber">
+            <div class="icon-container">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Production massive</h3>
+            <p>Plus de 380 millions de tonnes de plastique sont produites chaque année dans le monde.</p>
+          </div>
+          
+          <div class="carousel-item blue">
+            <div class="icon-container">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Pollution des océans</h3>
+            <p>Environ 8 millions de tonnes de plastique finissent dans les océans chaque année, soit l'équivalent d'un camion poubelle déversé chaque minute.</p>
+          </div>
+          
+          <div class="carousel-item teal">
+            <div class="icon-container">
+              <i class="fas fa-fish"></i>
+            </div>
+            <h3>Impact sur la faune marine</h3>
+            <p>Plus de 700 espèces marines sont menacées par la pollution plastique, que ce soit par ingestion ou par enchevêtrement.</p>
+          </div>
+          
+          <div class="carousel-item green">
+            <div class="icon-container">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Décomposition lente</h3>
+            <p>Une bouteille en plastique peut mettre jusqu'à 450 ans pour se décomposer dans la nature, et même alors, elle se transforme en microplastiques nocifs.</p>
+          </div>
+        </div>
+        
+        <div class="carousel-controls">
+          <button class="carousel-button prev" id="prev-button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button class="carousel-button next" id="next-button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="calculator" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <h2>Calculez Votre Empreinte Plastique</h2>
+        <p>Évaluez votre consommation de plastique et découvrez comment la réduire.</p>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3>Calculateur d'Empreinte Plastique</h3>
+          <p>Estimez votre consommation annuelle de plastique à usage unique</p>
+        </div>
+        
+        <div class="card-content">
+          <div class="slider-container" id="plastic-items">
+            <!-- Les sliders seront générés par JavaScript -->
+          </div>
+          
+          <button class="button primary full-width" id="calculate-button">
+            Calculer mon impact
+          </button>
+          
+          <div class="results hidden" id="results">
+            <div class="alert">
+              <div class="alert-header">
+                <i class="fas fa-exclamation-circle"></i>
+                <h4>Votre impact plastique annuel</h4>
+              </div>
+              <div class="alert-content">
+                <div class="result-row">
+                  <span>Nombre total d'articles:</span>
+                  <span class="bold" id="total-items">0 articles</span>
+                </div>
+                <div class="result-row">
+                  <span>Poids total de plastique:</span>
+                  <span class="bold" id="total-weight">0 kg</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" id="impact-progress"></div>
+                </div>
+              </div>
+            </div>
+            
+            <p class="text-center small">
+              En réduisant votre consommation de plastique à usage unique, vous pouvez avoir un impact significatif sur l'environnement.
+            </p>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <div class="info-text">
+            <i class="fas fa-trash"></i>
+            Le plastique peut mettre jusqu'à 1000 ans à se décomposer dans la nature
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="solutions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Solutions Alternatives</h2>
+        <p>Découvrez des alternatives simples et efficaces pour réduire votre consommation de plastique au quotidien.</p>
+      </div>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-container blue">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Hydratation Responsable</h3>
+            <p>Remplacez les bouteilles en plastique jetables</p>
+          </div>
+          <div class="card-content">
+            <p>
+              Une gourde réutilisable peut remplacer jusqu'à 1 460 bouteilles en plastique par an. Optez pour des modèles en acier inoxydable ou en verre.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="hydratation-responsable.html" class="button outline full-width">En savoir plus</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-container green">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Courses Zéro Déchet</h3>
+            <p>Adoptez des sacs et contenants réutilisables</p>
+          </div>
+          <div class="card-content">
+            <p>
+              Utilisez des sacs en tissu pour vos courses et privilégiez les magasins qui proposent des produits en vrac pour réduire les emballages.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="courses-zero-dechet.html" class="button outline full-width">En savoir plus</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-container purple">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3>Cuisine Écologique</h3>
+            <p>Éliminez le plastique de votre cuisine</p>
+          </div>
+          <div class="card-content">
+            <p>
+              Remplacez les ustensiles en plastique par des alternatives en bois ou en métal, et utilisez des contenants en verre pour la conservation.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="cuisine-ecologique.html" class="button outline full-width">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pledge Section -->
+  <section class="pledge" id="pledge">
+    <div class="container">
+      <div class="section-header">
+        <h2>Prenez un Engagement</h2>
+        <p>Rejoignez notre communauté et engagez-vous à réduire votre consommation de plastique.</p>
+      </div>
+      
+      <div class="card pledge-card">
+        <div class="card-header">
+          <h3>Prenez un engagement</h3>
+          <p>Choisissez les actions que vous vous engagez à prendre pour réduire votre consommation de plastique.</p>
+        </div>
+        
+        <div class="card-content">
+          <form id="pledge-form">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Mes engagements</label>
+              <div class="checkbox-group" id="pledge-options">
+                <!-- Les options seront générées par JavaScript -->
+              </div>
+            </div>
+            
+            <div class="form-group hidden" id="custom-pledge-container">
+              <label for="custom-pledge">Mon engagement personnel</label>
+              <textarea id="custom-pledge" placeholder="Décrivez votre engagement personnel..."></textarea>
+            </div>
+            
+            <button type="submit" class="button primary full-width">Je m'engage</button>
+          </form>
+        </div>
+        
+        <div class="card-footer">
+          <p class="small text-center">
+            En soumettant ce formulaire, vous acceptez de recevoir des informations sur la réduction du plastique.
+          </p>
+        </div>
+      </div>
+      
+      <div class="card pledge-success hidden" id="pledge-success">
+        <div class="card-header">
+          <div class="icon-container success">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Merci pour votre engagement!</h3>
+          <p>Votre promesse de réduire l'utilisation du plastique fait une différence.</p>
+        </div>
+        
+        <div class="card-content">
+          <div class="alert success">
+            <h4>Engagement enregistré</h4>
+            <p id="pledge-count-message">
+              Vous avez pris plusieurs engagements pour réduire votre consommation de plastique.
+              Ensemble, nous pouvons faire la différence!
+            </p>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <button class="button outline full-width" id="share-button">
+            <i class="fas fa-share-alt"></i>
+            Partager mon engagement
+          </button>
+          <p class="small text-center">
+            Nous vous enverrons des conseils et astuces pour vous aider à tenir vos engagements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>À Propos</h4>
+          <p>
+            Cette web app a été créée dans le cadre du hackathon IA for Good pour sensibiliser à la réduction de
+            l'usage du plastique.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">Guide du zéro déchet</a></li>
+            <li><a href="#">Alternatives au plastique</a></li>
+            <li><a href="#">Initiatives locales</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Partagez</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
+            <a href="#"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+            <a href="#"><i class="fab fa-facebook"></i><span class="sr-only">Facebook</span></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Réduisons le Plastique. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
